@@ -1,0 +1,23 @@
+.modal-header {
+    padding: 1rem 1rem 0rem 0rem;
+    border-bottom: 1px solid transparent;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-create {
+    text-align: center;
+    margin-top: 150px;
+}
+
+textarea.form-item {
+    height: 38px;
+    overflow: auto;
+}
+
+/*.input-group-checkbox {
+    background-color: #00cc66;
+}*/

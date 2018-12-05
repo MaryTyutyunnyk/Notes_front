@@ -1,0 +1,47 @@
+doctype html
+html(lang='en-EN')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        title
+            block title
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+        link(rel='stylesheet', href='css/main.css')
+    body
+        block content
+.container
+    // Button trigger modal
+    button.btn.btn-primary.btn-create(type='button', data-toggle='modal', data-target='#exampleModalCenter')
+        | Create TO-DO list
+    // Modal
+    #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+        .modal-dialog.modal-dialog-centered(role='document')
+            .modal-content
+                .modal-header
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    form
+                        .form-group
+                            input#formGroupExampleInput.form-control.form-item(type='text', placeholder='Add the title')
+                        .input-group.mb-3
+                            .input-group-prepend
+                                .input-group-text
+                                    input(type='checkbox')
+                            textarea.form-control.form-item(aria-label='With textarea', placeholder='Add item text')
+                        .input-group.mb-3
+                            .input-group-prepend
+                                .input-group-text
+                                    input(type='checkbox')
+                            textarea.form-control.form-item(aria-label='With textarea', placeholder='Add item text')
+                        .input-group.mb-3
+                            .input-group-prepend
+                                .input-group-text.input-group-checkbox
+                                    input.checkbox(type='checkbox')
+                            textarea.form-control.form-item(aria-label='With textarea', placeholder='Add item text')
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                    button.btn.btn-primary(type='button') Save changes
+            script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+            script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
