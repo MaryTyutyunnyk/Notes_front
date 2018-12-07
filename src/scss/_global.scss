@@ -1,21 +1,37 @@
+body {
+	font-family: $mainfont;
+}
+
 .modal-header {
-    padding: 1rem 1rem 0rem 0rem;
-    border-bottom: 1px solid transparent;
+  padding: 1rem 1rem 0rem 0rem;
+  border-bottom: 1px solid transparent;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.btn {
+	background: transparent;
+	outline: none;
+	border: none;
+	box-sizing: border-box;
+	padding: 10px;
+	margin: 0 10px;
+	cursor: pointer;
+	transition: .2s;
 }
 
 .btn-create {
-    text-align: center;
-    margin-top: 150px;
+  text-align: center;
+  margin-top: 150px;
 }
 
 textarea.form-item {
-    height: 38px;
-    overflow: auto;
+  height: 38px;
+  overflow: auto;
 }
 
 /*.input-group-checkbox {

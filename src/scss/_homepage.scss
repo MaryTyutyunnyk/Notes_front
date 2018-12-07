@@ -1,4 +1,46 @@
-.menu__title {
-	font-family: $titlefont;
-	color: navy;
+.menu {
+	box-sizing: border-box;
+  box-shadow: 0px -2px 10px 0px;
+
+	.container {
+		justify-content: space-between;
+		align-items: center;
+		margin: 0;
+
+		.menu__title {
+			font-family: $titlefont;
+			color: $color2;
+			font-size: 45px;
+			font-weight: 600;
+
+			i {
+				font-size: 35px;
+			}
+		}
+		.btn {
+	    font-size: 30px;
+			color: $color1;
+		}
+		.btn:hover {
+	    color: $color2;
+		}
+	}
+}
+
+#root {
+	min-height: 80vh;
+
+	.cap {
+		font-size: 30px;
+		color: $color1;
+	}
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+
+	// flex-direction: row-reverse;
+ //  justify-content: flex-end;
+ //  align-items: space-around;
 }
