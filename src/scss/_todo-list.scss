@@ -1,0 +1,210 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.top-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px -2px 10px 0px;
+    margin-bottom: 20px;
+}
+
+/********* Unfinished tasks section *********/
+
+.unfinished-tasks-list-title {
+    box-shadow: none;
+    margin-bottom: 20px;
+    font-family: "Segoe UI", sans-serif;
+    &:focus, &:active, &:hover {
+        border: 1px solid #ced4da;
+        box-shadow: none;
+    }
+}
+
+.unfinished-tasks-list {
+    margin-bottom: 20px;
+}
+
+.todo-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: .3rem;
+}
+
+.todo-list-input {
+    width: 100%;
+    border-radius: .3rem;
+    border: 1px solid #ced4da;
+    height: 40px;
+    padding: .375rem .75rem;
+}
+
+.todo-list-item .todo-list-input {
+    &:focus, &:active, &:hover {
+        box-shadow: none;
+        border: 1px solid #ced4da;
+        outline-color: transparent;
+    }
+}
+
+.unfinished-tasks-list-label, .finished-tasks-list-label {
+    width: 100%;
+    overflow: hidden;
+    line-height: 1.5rem;
+}
+
+/********* Icons *********/
+
+.material-icons {
+    color: #415764;
+    font-size: 35px;
+    cursor: pointer;
+    &:hover, &:active {
+        color: #f6741c;
+    }
+}
+
+.checkbox {
+    margin-right: 15px;
+}
+
+.edit, .save {
+    margin-left: 15px;
+}
+
+/********* Create new task *********/
+
+.create-new-task-section {
+    margin-bottom: 20px;
+}
+
+.todo-list-title {
+    color: #415764;
+    font-family: "Segoe UI Semibold";
+    font-size: 20px;
+}
+
+.create-new-task-form {
+    .create-new-task-input {
+        width: 100%;
+    }
+    border: 1px solid #ced4da;
+    position: relative;
+    height: calc(2.875rem + 2px);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+
+.create-new-task-link {
+    display: flex;
+    align-items: center;
+}
+
+.create-new-task-input {
+    border: none;
+    &:active, &:hover, &:focus {
+        border: none;
+        box-shadow: none;
+    }
+}
+
+.create-new-task-button-icon {
+    position: absolute;
+    right: 3px;
+    bottom: -17px;
+}
+
+.task-line {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #ced4da;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/********* Finished tasks section *********/
+
+.finished-tasks-section {
+    margin-bottom: 20px;
+}
+
+.finished-tasks-list {
+    margin-bottom: 20px;
+    li, .material-icons {
+        color: #ced4da;
+    }
+}
+
+/********** Footer *********/
+
+.footer {
+    margin-bottom: 100px;
+}
+
+.footer-content {
+    position: relative;
+}
+
+.palette-icon-link {
+    display: inline-flex;
+    border: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.palette-icon-container {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+}
+
+.palette-colors {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100px;
+    height: 40px;
+    background-color: #415764;
+    box-shadow: 0px 2px 9px -1px;
+    border-radius: .25rem;
+    position: relative;
+    bottom: 74px;
+    right: -30px;
+    opacity: 0;
+}
+
+.palette-icon-container:hover .palette-colors {
+    opacity: 1;
+}
+
+.palette-colors-link {
+    display: inline-flex;
+}
+
+.palette-colors-item {
+    display: inline-block;
+    background-color: #00aacc;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.palette-colors-item__yellow {
+    background-color: #ffffb3;
+}
+
+.palette-colors-item__blue {
+    background-color: #d8efef;
+}
+
+.palette-colors-item__pink {
+    background-color: #f1dcdc;
+}
+
+.palette-icon-column {
+    height: 40px;
+}

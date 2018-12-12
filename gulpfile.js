@@ -1,30 +1,30 @@
-'use strict'
+'use strict';
 
-const gulp = require('gulp')
-const browserSync = require('browser-sync').create()
-const clean = require('gulp-clean')
-const sass = require('gulp-sass')
-const minify = require('gulp-uglify')
-const autoprefixer = require('gulp-autoprefixer')
-const concat = require('gulp-concat')
-const babel = require('gulp-babel')
-const gulpSequence = require('gulp-sequence')
-const pug = require('gulp-pug')
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const clean = require('gulp-clean');
+const sass = require('gulp-sass');
+const minify = require('gulp-uglify');
+const autoprefixer = require('gulp-autoprefixer');
+const concat = require('gulp-concat');
+const babel = require('gulp-babel');
+const gulpSequence = require('gulp-sequence');
+const pug = require('gulp-pug');
 
 gulp.task('clean', () =>
  	gulp.src('./dist', {
       read: false
     })
     .pipe(clean())
-)
+);
 
 gulp.task('pug', () => {
-    gulp.src('./src/pug/index.pug')
+    gulp.src('./src/pug/*.pug')
         .pipe(pug({
             pretty: true
         }))
         .pipe(gulp.dest('./dist')) 
-})
+});
 
 gulp.task('minjs', () =>
  gulp.src('./src/js/**/*.js')
@@ -34,7 +34,7 @@ gulp.task('minjs', () =>
   .pipe(minify())
   .pipe(concat('script.min.js'))
   .pipe(gulp.dest('./dist/js'))
-)
+);
 
 gulp.task('sass', () =>
  gulp.src('./src/scss/**/*.scss')
@@ -45,18 +45,18 @@ gulp.task('sass', () =>
 		}))
 		.pipe(concat('style.min.css'))
 		.pipe(gulp.dest('./dist/css'))
-)
+);
 
-gulp.task('build', gulpSequence('clean', ['pug', 'sass', 'minjs']))
+gulp.task('build', gulpSequence('clean', ['pug', 'sass', 'minjs']));
 
 gulp.task('devserver', ['build'], () => {
 	browserSync.init({
     server: "./dist"
-	})
-    gulp.watch('./src/pug/**/*.pug', ['pug']).on('change', browserSync.reload)
-    gulp.watch('./src/layout/**/*.pug', ['pug']).on('change', browserSync.reload)
-    gulp.watch('./src/js/**/*.js', ['minjs']).on('change', browserSync.reload)
-    gulp.watch('./src/scss/**/*.scss', ['sass']).on('change', browserSync.reload)
-})
+	});
+    gulp.watch('./src/pug/**/*.pug', ['pug']).on('change', browserSync.reload);
+    gulp.watch('./src/layout/**/*.pug', ['pug']).on('change', browserSync.reload);
+    gulp.watch('./src/js/**/*.js', ['minjs']).on('change', browserSync.reload);
+    gulp.watch('./src/scss/**/*.scss', ['sass']).on('change', browserSync.reload);
+});
 
-gulp.task('dev', gulpSequence('clean', 'devserver'))
+gulp.task('dev', gulpSequence('clean', 'devserver'));

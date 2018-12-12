@@ -1,0 +1,73 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        title
+            block title
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+        link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css')
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        link(rel='stylesheet', href='css/style.min.css')
+    body
+        block content
+        section.top-content
+            .container
+                .row
+                    .col
+                        a.material-icons
+                            i.material-icons arrow_back_ios
+                    .col.text-right
+                        a.material-icons
+                            i.material-icons turned_in_not
+                            // <i class="material-icons">turned_in</i>
+                        a.material-icons(href='#')
+                            i.material-icons delete_forever
+        section.unfinished-tasks-section
+            .container
+                .row
+                    .col
+                        input.form-control.form-control-lg.unfinished-tasks-list-title(type='text', placeholder='Add title', name='title')
+                        h5.todo-list-title New tasks
+                        span.task-line
+                        ul#unfinished-tasks-list.unfinished-tasks-list
+        section.create-new-task-section
+            .container
+                .row
+                    .col
+                        form.form-inline.create-new-task-form
+                            .col-10.col-sm-11.col-md-11.col-lg-11
+                                input#create-new-task-input.form-control.create-new-task-input(type='text', placeholder='Add task', autofocus='')
+                            .col-2.col-sm-1.col-md-1.col-lg-1
+                                a#create-new-task-link.create-new-task-link(href='javascript://')
+                                    i.material-icons.create-new-task-button-icon add_circle
+        section.finished-tasks-section
+            .container
+                .row
+                    .col
+                        h5.todo-list-title Resolved tasks
+                        span.task-line
+                        ul#finished-tasks-list.finished-tasks-list
+        section.footer
+            .container
+                .row.align-items-center.footer-content
+                    .col.palette-icon-column
+                        .palette-icon-container
+                            a.palette-icon-link(href='javascript://')
+                                i.material-icons.palette palette
+                            .palette-colors
+                                a.palette-colors-link(href='javascript://')
+                                    span.palette-colors-item.palette-colors-item__yellow
+                                a.palette-colors-link(href='javascript://')
+                                    span.palette-colors-item.palette-colors-item__blue
+                                a.palette-colors-link(href='javascript://')
+                                    span.palette-colors-item.palette-colors-item__pink
+                    .col.text-center
+                        p.date Edited: 13:28
+                    .col.text-right
+                        a(href='javascript://')
+                            i.material-icons done
+        script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+        script(src='js/script.min.js')
