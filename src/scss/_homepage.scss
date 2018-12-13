@@ -29,18 +29,61 @@
 
 #root {
 	min-height: 80vh;
-
+  flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: center;
+	  
 	.cap {
 		font-size: 30px;
 		color: $color1;
 	}
+
+	.note {
+		background: beige;
+		max-width: 250px;
+		height: 200px;
+    border-radius: 5px;
+    margin: 10px;
+    text-decoration: none;
+    color: inherit;
+
+		.note-title, .note-txt	{
+	    margin: 10px;
+		}
+		.note-title	{
+	    margin: 10px;
+	    font-size: 25px;
+	    font-weight: 600;
+		}
+		.note-txt	{
+	    font-size: 18px;
+	    max-height: 145px;
+    	overflow: hidden;
+		}
+	}
 }
 
-.container-new {
-  justify-content: center;
-  align-items: center;
-
-	// flex-direction: row-reverse;
- //  justify-content: flex-end;
- //  align-items: space-around;
+.note-template {
+	background: beige;
+	box-sizing: border-box;
+	padding: 50px;
+	height: 100vh;
+	
+	.note-title, 
+	.note-txt, 
+	.note-date {
+		margin-bottom: 20px;
+		color: $color1;
+	}
+	.note-title {
+		color: $color2;
+		font-size: 50px;
+    font-weight: 600;
+	}
+	.note-txt {
+		font-size: 30px;
+	}
+	.note-date {
+		font-size: 20px;
+	}
 }
