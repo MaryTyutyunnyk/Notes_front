@@ -19,11 +19,11 @@ gulp.task('clean', () =>
 );
 
 gulp.task('pug', () => {
-    gulp.src('./src/pug/*.pug')
-        .pipe(pug({
-            pretty: true
-        }))
-        .pipe(gulp.dest('./dist')) 
+  gulp.src('./src/pug/*.pug')
+    .pipe(pug({
+        pretty: true
+    }))
+    .pipe(gulp.dest('./dist')) 
 });
 
 gulp.task('minjs', () =>
@@ -48,6 +48,24 @@ gulp.task('sass', () =>
 );
 
 gulp.task('build', gulpSequence('clean', ['pug', 'sass', 'minjs']));
+
+gulp.task('back', () => {
+  gulp.src('./src/js/**/*.js')
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(minify())
+    .pipe(concat('script.min.js'))
+    .pipe(gulp.dest('../public/js')) 
+  gulp.src('./src/scss/**/*.scss')
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(concat('style.min.css'))
+    .pipe(gulp.dest('../public/css'))
+});
 
 gulp.task('devserver', ['build'], () => {
 	browserSync.init({
