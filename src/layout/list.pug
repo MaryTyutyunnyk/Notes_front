@@ -27,27 +27,15 @@ html(lang='en')
             .container
                 .row
                     .col
-                        input.form-control.form-control-lg.unfinished-tasks-list-title(type='text', placeholder='Add title', name='title')
-                        h5.todo-list-title New tasks
-                        span.task-line
-                        ul#unfinished-tasks-list.unfinished-tasks-list
-        section.create-new-task-section
-            .container
-                .row
-                    .col
-                        form.form-inline.create-new-task-form
-                            .col-10.col-sm-11.col-md-11.col-lg-11
-                                input#create-new-task-input.form-control.create-new-task-input(type='text', placeholder='Add task', autofocus='')
-                            .col-2.col-sm-1.col-md-1.col-lg-1
-                                a#create-new-task-link.create-new-task-link(href='javascript://')
-                                    i.material-icons.create-new-task-button-icon add_circle
-        section.finished-tasks-section
-            .container
-                .row
-                    .col
-                        h5.todo-list-title Resolved tasks
-                        span.task-line
-                        ul#finished-tasks-list.finished-tasks-list
+                        input.form-control.form-control-lg.unfinished-tasks-l
+                        title(type='text', placeholder='Add title', name='title')
+
+
+                        .form-group
+                            label(for='exampleFormControlTextarea1')
+                            textarea#exampleFormControlTextarea1.form-control.roun0(rows='6')
+
+
         section.footer
             .container
                 .row.align-items-center.footer-content
