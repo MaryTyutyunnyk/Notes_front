@@ -1,41 +1,108 @@
 doctype html
 html(lang='en')
-  head
-    meta(charset='UTF-8')
-    title Notes
-    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.5.0/css/all.css', integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU', crossorigin='anonymous')
-    link(href='https://fonts.googleapis.com/css?family=Comfortaa:400,700|Montserrat+Alternates:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext', rel='stylesheet')
-    link(rel='stylesheet', href='css/style.min.css')
-  body
-    section.section.menu
-      .container-new
-        h2.menu__title
-          span
-            | N
-            i.fas.fa-globe-americas
-          | tes
-        .menu__btns
-          button.btn
-            i.far.fa-clipboard
-          button.btn
-            i.far.fa-check-square
-    section.section
-      #root.container-new
-        a#5c1023b5c39b660f3861d0cd.note(href='/notes')
-          h2.note-title note title 1
-          p.note-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            |Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            |Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            |Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            |Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            |Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            |Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            |Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            |Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            |Lorem ipsum dolor sit amet, consectetur adipisicing elit.
- 
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+		title Notes
+		link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+		link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+		link(href='https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&subset=cyrillic', rel='stylesheet')
+		link(rel='stylesheet', href='css/style.min.css')
+	body
+		section.top-content
+			.container
+				.row
+					.col
+						a.top-content__logo
+							h2.top-content__logo-text
+								span
+									| N
+								i.material-icons.public public
+								| tes
+					.col.text-right
+						a.top-content-icon-link
+							i.material-icons description
+						a.top-content-icon-link
+							i.material-icons check_box
+		section.main-content
+			#root
+				.container.main-content-notes-container
+					a#5c1023b5c39b660f3861d0cd.note(href='/notes')
+						h2.note-title Note title 1
+						p.note-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
-    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
-    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
-    script(src='js/script.min.js')
+
+
+					a#5c1023b5c39b660f3861d0cd.note(href='/notes')
+						h2.note-title Note title 2
+						p.note-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+					a#5c1023b5c39b660f3861d0cd.note(href='/notes')
+						h2.note-title Note title 3
+						p.note-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+					a#5c1023b5c39b660f3861d0cd.note(href='/notes')
+						h2.note-title Note title 4
+						p.note-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+
+					a#5c1023b5c39b660f3861d0cd.note(href='/notes')
+						h2.note-title Note title 5
+						p.note-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+
+					a#5c1023b5c39b660f3861d0cd.note(href='/notes')
+						h2.note-title Note title 6
+						p.note-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+
+					a#5c1023b5c39b660f3861d0cd.note(href='/notes')
+						h2.note-title Note title 7
+						p.note-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+					a#5c1023b5c39b660f3861d0cd.note(href='/notes')
+						h2.note-title Note title 8
+						p.note-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+
+	script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+	script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+	script(src='js/script.min.js')

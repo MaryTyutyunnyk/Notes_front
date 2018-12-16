@@ -1,0 +1,21 @@
+.todo-note-section {
+    margin-bottom: 20px;
+}
+
+.todo-note-title {
+    box-shadow: none;
+    margin-bottom: 20px;
+    font-family: "Segoe UI", sans-serif;
+    &:focus, &:active, &:hover {
+        border: 1px solid #ced4da;
+        box-shadow: none;
+    }
+}
+
+.todo-note-text {
+    margin-bottom: 20px;
+    &:focus, &:active, &:hover {
+        border: 1px solid #ced4da;
+        box-shadow: none;
+    }
+}
