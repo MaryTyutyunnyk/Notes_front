@@ -1,28 +1,31 @@
 let addIcon = document.getElementById("create-new-task-link");
 let inputTask = document.getElementById("create-new-task-input");
+//////////////// Выключает автозаполнение инпута 
+    inputTask.setAttribute('autocomplete', 'off');
+////////////////
 let unfinishedTasks = document.getElementById("unfinished-tasks-list");
 let finishedTasks = document.getElementById("finished-tasks-list");
 
 function createNewElement(task, finished) {
     let listItem = document.createElement("li");
-    listItem.setAttribute("class", "todo-list-item");
+    listItem.setAttribute("class", "todo-list-item"); // почему не через className?
     let checkbox = document.createElement("a");
 
     if (finished) {
-        checkbox.className = "material icons checkbox";
+        checkbox.className = "material icons checkbox"; // почему 2 одинаковых? Можно вынести из if'a
         checkbox.innerHTML = `<i class="material-icons">check_box</i>`;
     } else {
-        checkbox.className = "material icons checkbox";
+        checkbox.className = "material icons checkbox"; // почему 2 одинаковых? Можно вынести из if'a
         checkbox.innerHTML = `<i class="material-icons">check_box_outline_blank</i>`;
     }
 
     let label = document.createElement("label");
     label.innerText = task;
-    label.setAttribute("class", "unfinished-tasks-list-label");
+    label.setAttribute("class", "unfinished-tasks-list-label"); // почему не через className?
     let input = document.createElement("input");
     input.type = "text";
-    input.setAttribute("class", "form-control");
-    input.setAttribute("class", "todo-list-input");
+    input.setAttribute("class", "form-control"); // почему не className 1 строкой?
+    input.setAttribute("class", "todo-list-input"); // ^
     input.setAttribute("style", `display: none`);
     let editButton = document.createElement("a");
     editButton.className = "material-icons edit";
@@ -50,7 +53,12 @@ function addTask() {
     save();
 }
 addIcon.onclick = addTask;
-
+/// Добавляет пункт при нажатии на enter
+document.querySelector('.form-inline').onsubmit = e => {
+	e.preventDefault();
+	addTask();
+}
+///
 function deleteTask() {
     let listItem = this.parentNode;
     let ul = listItem.parentNode;
@@ -132,18 +140,39 @@ function load() {
 }
 
 let data = load();
-for (let i = 0; i < data.unfinishedTasks.length; i++) {
-    let listItem = createNewElement(data.unfinishedTasks[i], false);
+
+/////////////Вариант 1
+// for (let i = 0; i < data.unfinishedTasks.length; i++) {
+//     let listItem = createNewElement(data.unfinishedTasks[i], false);
+//     unfinishedTasks.appendChild(listItem);
+//     bindTaskEvents(listItem, finishedTasks); // <=== ошибка во втором аргументе
+// }
+// for (let i = 0; i < data.finishedTasks.length; i++) {
+//     let listItem = createNewElement(data.finishedTasks[i], true);
+//     finishedTasks.appendChild(listItem);
+//     bindTaskEvents(listItem, unfinishedTasks); // <=== ошибка во втором аргументе
+// }
+
+/////////////Вариант 2
+data.unfinishedTasks.forEach(value => {
+	const listItem = createNewElement(value, false);
     unfinishedTasks.appendChild(listItem);
-    bindTaskEvents(listItem, finishedTasks);
-}
-
-for (let i = 0; i < data.finishedTasks.length; i++) {
-    let listItem = createNewElement(data.finishedTasks[i], true);
+    bindTaskEvents(listItem, finishTask);
+})
+data.finishedTasks.forEach(value => {
+	const listItem = createNewElement(value, true);
     finishedTasks.appendChild(listItem);
-    bindTaskEvents(listItem, unfinishedTasks);
-}
+    bindTaskEvents(listItem, unfinishTask);
+})
 
+/////////////Вариант 3
+// const parseLocalStorage = (text, status, arr, taskFunc) => {
+// 	const listItem = createNewElement(text, status);
+//     arr.appendChild(listItem);
+//     bindTaskEvents(listItem, taskFunc);
+// }
+// data.unfinishedTasks.forEach(value => parseLocalStorage(value, false, unfinishedTasks, finishTask) );
+// data.finishedTasks.forEach(value => parseLocalStorage(value, true, finishedTasks, unfinishTask) );
 
 
 
